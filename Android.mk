@@ -92,7 +92,7 @@ LOCAL_CFLAGS += $(MKSH_CFLAGS)
 
 include $(BUILD_EXECUTABLE)
 
-ifeq ($(PRODUCT_FULL_TREBLE),true)
+#ifeq ($(PRODUCT_FULL_TREBLE),true)
 # /vendor/etc/mkshrc
 include $(CLEAR_VARS)
 
@@ -101,6 +101,7 @@ LOCAL_MODULE_STEM := mkshrc
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_ETC)
 LOCAL_SRC_FILES := $(LOCAL_MODULE)
+LOCAL_MODULE_TAGS := optional
 include $(BUILD_PREBUILT)
 
 # /vendor/bin/sh
@@ -128,9 +129,9 @@ LOCAL_CFLAGS += \
 LOCAL_CFLAGS += $(MKSH_CFLAGS)
 
 LOCAL_FORCE_STATIC_EXECUTABLE := true
-
+LOCAL_MODULE_TAGS := optional
 include $(BUILD_EXECUTABLE)
-endif
+#endif
 
 MKSH_SRC_FILES:=
 MKSH_CFLAGS:=
