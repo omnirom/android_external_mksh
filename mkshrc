@@ -19,3 +19,9 @@ PS4='[$EPOCHREALTIME] '; PS1='${|
 
 	return $e
 }$HOSTNAME:${PWD:-?} '"$PS1 "
+
+alias ls='ls --color=auto'
+alias grep='grep --color=always'
+alias rgrep='grep -R'
+alias ll='ls -al'
+alias lz='ls -alZ'
